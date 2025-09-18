@@ -1,0 +1,5 @@
+Q1: Why didn’t we use sudo before node lab.js in this case?: 
+Q2: What does lab.js do?: When we run lab.js what appears in the contents of the plain text file. 
+Q3: Why does *************after readFile*****************
+appear before the contents of plain.txt in the output while the call to readFile is before
+the console.log call that prints this line.
