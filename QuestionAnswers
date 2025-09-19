@@ -1,0 +1,27 @@
+Q1: Why didn’t we use sudo before node lab.js in this case?:
+Your running a Node.JS file as a regular user. No speical privileges are needed. 
+
+Q2: What does lab.js do?: When we run lab.js what appears in the contents of the plain text file. 
+
+Q3: Why does *************after readFile*****************
+appear before the contents of plain.txt in the output while the call to readFile is before
+the console.log call that prints this line: Because fs.readFile is asynchronous. 
+
+Q4:What does the function toString('utf8') do: 
+The function toString('utf8')converts binary data in a Buffer into readable text using UTF-8 encoding.
+
+Q5: We don’t need to convert the read buffer using toString('utf8') before we serve it up
+to the client. Why not?: Because  of the Content-Type header
+
+Q6: How can we build a server that is capable of serving all types of files without having to
+change the code every time?:
+Build a server that determines the file’s MIME type from its extension and serves the raw bytes with the correct 
+Content-Type, so any file type can be handled automatically.
+
+Q7: The http server should probably able to send html, js, and other files to the browser, as well
+as respond to queries/routes like the one you implemented in homework assignment 2. How can
+we combine all these features in the same server?:
+
+Combine features by first checking if a request matches a 
+dynamic route and handling it, and otherwise serving the requested file as a static resource with the appropriate MIME type.
+
